@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Admin Page</title>
+    <style>
+        .s_tbdr{
+            border: 1px dashed black;
+        }
+        .s_cont_fluid{
+            height: 1000px;
+        }
+        .s_purple{
+            background: #442460;
+        }
+        .s_light_purple{
+            background: #56396F !important;
+        }
+        .s_ll_purple{
+            color: #C6BccF;
+        }
+        aside{
+          transition: all 0.2s linear;
+        }
+        header{
+            min-height: 47px;
+        }
+        aside .accordion button, .s_home{
+            border-bottom: 1px solid #492964;
+        }
+        input:focus{
+            box-shadow: none !important;
+        }
+        .accordion-button{
+            border-left: 6px solid #56396F !important;
+        }
+        .accordion-button:focus{
+            color: #ffb900 !important;
+            box-shadow: none;
+            border: none;
+            border-left: 6px solid #ffb900 !important;
+        }
+        @media only screen and (max-width: 991px){
+          aside{
+            transform: translate(-200px, 0px);
+          }
+        }
+        @media only screen and (min-width: 992px){
+          aside{
+            transform: translate(0px, 0px);
+          }
+          .headerlp{
+            text-align: left !important;
+          }
+        }
+    </style>
+</head>
+<body>
+    <div class="p-0 container-fluid s_cont_fluid s_tbdr">
+        <header>
+            <div class="row m-0 h-100">
+                <div class="col-12 col-md-12 col-lg-2 s_tbdr headerlp p-0 text-center">
+                    <a href="#" class="text-decoration-none">
+                        <img src="./img/logo.svg" alt="logo" class="ms-3 mt-2"> <span>NEURO LAB</span>
+                    </a>
+                </div>
+                <div class="col-12 col-md-12 col-lg-10 s_tbdr headerrp p-0">
+                    <form action="#" class="float-start">
+                        <input type="search" name="search" class="border-0 mt-2 ms-5 form-control" placeholder="Search and Help">
+                    </form>
+                    <ul class="nav float-end">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Active</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Disabled</a>
+                        </li>
+                      </ul>
+                </div>
+            </div>
+        </header>
+        <div class="s_main row m-0 h-100">
+            <aside class="col-1 col-lg-2 p-0 s_purple s_tbdr">
+              <button class="accordion-button s_light_purple collapsed rounded-0 s_ll_purple p-3 s_home" type="button">
+                <img src="./img/house.svg" alt="chart" class="me-2"> Home
+              </button>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item rounded-0 border-0">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button s_light_purple collapsed rounded-0 s_ll_purple" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <img src="./img/chart.svg" alt="chart" class="me-2"> Client dashboard
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the first item's accordion body.</strong>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item rounded-0 border-0">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed s_light_purple s_ll_purple" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <img src="./img/email.svg" alt="chart" class="me-2"> Solutions
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the second item's accordion body.</strong>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item rounded-0 border-0">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed s_light_purple rounded-0 s_ll_purple" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <img src="./img/receipt.svg" alt="chart" class="me-2"> Payment history
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>This is the third item's accordion body.</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </aside>
+            <section class="col-11 col-lg-10 p-0 s_tbdr">
+                B 
+            </section>
+        </div>
+        <footer>
+
+        </footer>
+        
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
